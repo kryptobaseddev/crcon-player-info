@@ -5,19 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CRCON Player Info</title>
     <style>
+        /* Add your CSS styles here */
         body {
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
-            background-image: url('https://github.com/kryptobaseddev/crcon-player-info/blob/main/images/hll-background-tk.jpg?raw=true');
+            background-image: url('YOUR_BACKGROUND_IMAGE_URL');
             background-size: cover;
             color: #ffffff;
         }
         .banner {
             background-color: #222222;
-            color: #ffffff;
             padding: 10px 20px;
             text-align: center;
+            color: #ffffff;
         }
         .content {
             padding: 20px;
@@ -35,6 +36,11 @@
         a:hover {
             text-decoration: underline;
         }
+        .logo {
+            display: block;
+            margin: 0 auto 20px;
+            max-width: 100px; /* Adjust based on your logo's size */
+        }
     </style>
 </head>
 <body>
@@ -43,14 +49,23 @@
     </div>
     <div class="content">
         <div class="section">
-            <h2>The Pump Shop - Gaming Server Group</h2>
-            <p>Welcome to The Pump Shop, a dedicated gaming server group for Hell Let Loose. Join our Discord to connect with the community and get the latest updates on our server events.</p>
-            <p><a href="YOUR_DISCORD_INVITE_LINK">Join our Discord</a></p>
+            <h2>About Us</h2>
+            <p>Introduce your team or project here. Describe what makes your gaming server group or project special and what visitors can expect to find or achieve through your site.</p>
         </div>
         <div class="section">
             <h2>Projects & Development</h2>
             <p>Explore the ongoing development of CRCON Player Info Admin tools designed to enhance your gaming experience. Our projects aim to provide comprehensive admin tools for server management and player information retrieval.</p>
+            <h3>Player Info Admin Webapp</h3>
+            <p>All in one tool to pull information from CRCON about players on the server. Features include synced login with Django auth and 3 tabs for reviewing players: TKs, Ban List, and VIP list.</p>
+            <h3>HLL Admin Discord Bot</h3>
+            <p>A discord slash commands bot to message in-game players. Features include chatting with in-game players using a discord channel and slash commands to warn players with default messages.</p>
             <p><a href="api-endpoints_Documentation.html">View API Endpoint Documentation</a></p>
+        </div>
+        <div class="section">
+            <h2>The Pump Shop - Gaming Server Group</h2>
+            <img src="YOUR_LOGO_URL" alt="The Pump Shop Logo" class="logo">
+            <p>Welcome to The Pump Shop, a dedicated gaming server group for Hell Let Loose. Join our Discord to connect with the community and get the latest updates on our server events.</p>
+            <p><a href="YOUR_DISCORD_INVITE_LINK">Join our Discord</a></p>
         </div>
     </div>
 </body>
