@@ -10,7 +10,7 @@
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
-            background-image: url('YOUR_BACKGROUND_IMAGE_URL');
+            background-image: url('https://github.com/kryptobaseddev/crcon-player-info/blob/main/images/hll-background-tk.jpg?raw=true');
             background-size: cover;
             color: #ffffff;
         }
@@ -36,10 +36,18 @@
         a:hover {
             text-decoration: underline;
         }
+        .logo-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
         .logo {
-            display: block;
-            margin: 0 auto 20px;
             max-width: 100px; /* Adjust based on your logo's size */
+            margin-right: 20px; /* Adds spacing between logo and text */
+        }
+        h2 {
+            margin: 0; /* Removes default margin to align text closer to logo */
+            font-size: 24px; /* Adjust size as needed */
         }
     </style>
 </head>
@@ -48,61 +56,94 @@
         <h1>CRCON Player Info</h1>
     </div>
     <div class="content">
-        <div class="section">
-            <h2>About Us</h2>
-            <p>I am an avid Hell Let Loose player and owner of The Pump Shop. I dabble in coding and like to find ways to make tasks easier for myself and others. This github project page will house my effort to bring some more useful tools, to compliment the CRCON Admin Tool for HLL.</p>
-        </div>
-        <div class="section">
-            <h2>Projects & Development</h2>
-<h3>Player Info Admin Webapp</h3>
-    <ul>
-        <li>All in one tool to pull information from CRCON about players on the server.</li>
-        <li>Synced login with Django auth.</li>
-        <li>3 tabs for reviewing players:
+      <div class="section">
+        <h2>About Us</h2>
+        <p>
+          I am an avid Hell Let Loose player and owner of The Pump Shop. I
+          dabble in coding and like to find ways to make tasks easier for myself
+          and others. This github project page will house my effort to bring
+          some more useful tools, to compliment the CRCON Admin Tool for HLL.
+        </p>
+      </div>
+      <div class="section">
+        <h2>Projects & Development</h2>
+        <h3>Player Info Admin Webapp</h3>
+        <ul>
+          <li>
+            All in one tool to pull information from CRCON about players on the
+            server.
+          </li>
+          <li>Synced login with Django auth.</li>
+          <li>
+            3 tabs for reviewing players:
             <ul>
-                <li>TKs (team kills): players in active game which have more than 1 TK
-                    <ul>
-                        <li>Players ranked from most to least TKs.</li>
-                        <li>Clicking on a player will load their chat history for the current session.</li>
-                        <li>Ability to message player with default messages/warnings.</li>
-                        <li>Ability to Flag player for review.</li>
-                    </ul>
-                </li>
-                <li>Ban List: List of all players on Server with more than 1 Ban
-                    <ul>
-                        <li>Rank players from most bans to least bans.</li>
-                        <li>Ability to review past Bans with reason and comments.</li>
-                        <li>Ability to Perma ban player.</li>
-                        <li>Ability to Reset bans on player.</li>
-                        <li>Ability to Flag player.</li>
-                    </ul>
-                </li>
-                <li>VIP list of all Players: List out all players that have VIP
-                    <ul>
-                        <li>Players can be sorted by soonest expiration to longest.</li>
-                        <li>Ability to add players to VIP.</li>
-                        <li>Ability to extend VIP time.</li>
-                        <li>Ability to setup API call to check discord VIP (Role) status and create Flag for expired Discord VIP status.</li>
-                    </ul>
-                </li>
+              <li>
+                TKs (team kills): players in active game which have more than 1
+                TK
+                <ul>
+                  <li>Players ranked from most to least TKs.</li>
+                  <li>
+                    Clicking on a player will load their chat history for the
+                    current session.
+                  </li>
+                  <li>
+                    Ability to message player with default messages/warnings.
+                  </li>
+                  <li>Ability to Flag player for review.</li>
+                </ul>
+              </li>
+              <li>
+                Ban List: List of all players on Server with more than 1 Ban
+                <ul>
+                  <li>Rank players from most bans to least bans.</li>
+                  <li>Ability to review past Bans with reason and comments.</li>
+                  <li>Ability to Perma ban player.</li>
+                  <li>Ability to Reset bans on player.</li>
+                  <li>Ability to Flag player.</li>
+                </ul>
+              </li>
+              <li>
+                VIP list of all Players: List out all players that have VIP
+                <ul>
+                  <li>
+                    Players can be sorted by soonest expiration to longest.
+                  </li>
+                  <li>Ability to add players to VIP.</li>
+                  <li>Ability to extend VIP time.</li>
+                  <li>
+                    Ability to setup API call to check discord VIP (Role) status
+                    and create Flag for expired Discord VIP status.
+                  </li>
+                </ul>
+              </li>
             </ul>
-        </li>
-    </ul>
-    
-    <h3>HLL Admin Discord Bot</h3>
-    <ul>
-        <li>Chat with in-game players using discord channel.</li>
-        <li>Slash commands to Warn players with default messages.</li>
-        <li>More functions TBD.</li>
-    </ul>
-            <p><a href="api-endpoints_Documentation.html">View API Endpoint Documentation</a></p>
-        </div>
-        <div class="section">
-            <h2>The Pump Shop - HLL Gaming Community</h2>
+          </li>
+        </ul>
+
+        <h3>HLL Admin Discord Bot</h3>
+        <ul>
+          <li>Chat with in-game players using discord channel.</li>
+          <li>Slash commands to Warn players with default messages.</li>
+          <li>More functions TBD.</li>
+        </ul>
+        <p>
+          <a href="api-endpoints_Documentation.html"
+            >View API Endpoint Documentation</a
+          >
+        </p>
+      </div>
+      <div class="section">
+        <div class="logo-header">
             <img src="https://github.com/kryptobaseddev/crcon-player-info/blob/main/images/PumpShop-logo-trans.png?raw=true" alt="The Pump Shop Logo" class="logo">
-            <p>Welcome to The Pump Shop, a dedicated gaming server group for Hell Let Loose. Join our Discord to connect with the community and get the latest updates on our server events.</p>
-            <p><a href="https://discord.gg/pumpshop">Join our Discord</a></p>
+            <h2>The Pump Shop - HLL Gaming Community</h2>
         </div>
+        <p>
+          Welcome to The Pump Shop, a dedicated gaming server group for Hell Let
+          Loose. Join our Discord to connect with the community and get the
+          latest updates on our server events.
+        </p>
+        <p><a href="https://discord.gg/pumpshop">Join our Discord</a></p>
+      </div>
     </div>
-</body>
+  </body>
 </html>
