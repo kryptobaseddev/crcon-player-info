@@ -1,0 +1,2058 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>API Documentation</title>
+    </head>
+    <body>
+        <h1>API Documentation</h1>
+        <div id="toc">
+            <h2>Table of Contents</h2>
+            <ul>
+    <li><a href="#async_upload_vips">async_upload_vips</a></li><li><a href="#async_upload_vips_result">async_upload_vips_result</a></li><li><a href="#blacklist_player">blacklist_player</a></li><li><a href="#clear_cache">clear_cache</a></li><li><a href="#date_scoreboard">date_scoreboard</a></li><li><a href="#describe_admin_pings_discord_webhooks_config">describe_admin_pings_discord_webhooks_config</a></li><li><a href="#describe_audit_discord_webhooks_config">describe_audit_discord_webhooks_config</a></li><li><a href="#describe_auto_broadcasts_config">describe_auto_broadcasts_config</a></li><li><a href="#describe_auto_mod_level_config">describe_auto_mod_level_config</a></li><li><a href="#describe_auto_mod_no_leader_config">describe_auto_mod_no_leader_config</a></li><li><a href="#describe_auto_mod_seeding_config">describe_auto_mod_seeding_config</a></li><li><a href="#describe_auto_mod_solo_tank_config">describe_auto_mod_solo_tank_config</a></li><li><a href="#describe_camera_discord_webhooks_config">describe_camera_discord_webhooks_config</a></li><li><a href="#describe_camera_notification_config">describe_camera_notification_config</a></li><li><a href="#describe_chat_commands_config">describe_chat_commands_config</a></li><li><a href="#describe_chat_discord_webhooks_config">describe_chat_discord_webhooks_config</a></li><li><a href="#describe_expired_vip_config">describe_expired_vip_config</a></li><li><a href="#describe_kills_discord_webhooks_config">describe_kills_discord_webhooks_config</a></li><li><a href="#describe_log_line_webhook_config">describe_log_line_webhook_config</a></li><li><a href="#describe_name_kick_config">describe_name_kick_config</a></li><li><a href="#describe_rcon_connection_settings_config">describe_rcon_connection_settings_config</a></li><li><a href="#describe_rcon_server_settings_config">describe_rcon_server_settings_config</a></li><li><a href="#describe_real_vip_config">describe_real_vip_config</a></li><li><a href="#describe_scorebot_config">describe_scorebot_config</a></li><li><a href="#describe_server_name_change_config">describe_server_name_change_config</a></li><li><a href="#describe_standard_broadcast_messages">describe_standard_broadcast_messages</a></li><li><a href="#describe_standard_punishments_messages">describe_standard_punishments_messages</a></li><li><a href="#describe_standard_welcome_messages">describe_standard_welcome_messages</a></li><li><a href="#describe_steam_config">describe_steam_config</a></li><li><a href="#describe_tk_ban_on_connect_config">describe_tk_ban_on_connect_config</a></li><li><a href="#describe_vac_game_bans_config">describe_vac_game_bans_config</a></li><li><a href="#describe_votekick_autotoggle_config">describe_votekick_autotoggle_config</a></li><li><a href="#describe_votemap_config">describe_votemap_config</a></li><li><a href="#describe_watchlist_discord_webhooks_config">describe_watchlist_discord_webhooks_config</a></li><li><a href="#do_add_admin">do_add_admin</a></li><li><a href="#do_add_map_to_rotation">do_add_map_to_rotation</a></li><li><a href="#do_add_map_to_whitelist">do_add_map_to_whitelist</a></li><li><a href="#do_add_maps_to_rotation">do_add_maps_to_rotation</a></li><li><a href="#do_add_maps_to_whitelist">do_add_maps_to_whitelist</a></li><li><a href="#do_add_vip">do_add_vip</a></li><li><a href="#do_ban_profanities">do_ban_profanities</a></li><li><a href="#do_kick">do_kick</a></li><li><a href="#do_message_player">do_message_player</a></li><li><a href="#do_perma_ban">do_perma_ban</a></li><li><a href="#do_punish">do_punish</a></li><li><a href="#do_reconnect_gameserver">do_reconnect_gameserver</a></li><li><a href="#do_remove_admin">do_remove_admin</a></li><li><a href="#do_remove_all_vips">do_remove_all_vips</a></li><li><a href="#do_remove_map_from_rotation">do_remove_map_from_rotation</a></li><li><a href="#do_remove_map_from_whitelist">do_remove_map_from_whitelist</a></li><li><a href="#do_remove_maps_from_rotation">do_remove_maps_from_rotation</a></li><li><a href="#do_remove_maps_from_whitelist">do_remove_maps_from_whitelist</a></li><li><a href="#do_remove_perma_ban">do_remove_perma_ban</a></li><li><a href="#do_remove_temp_ban">do_remove_temp_ban</a></li><li><a href="#do_remove_vip">do_remove_vip</a></li><li><a href="#do_reset_map_whitelist">do_reset_map_whitelist</a></li><li><a href="#do_reset_votekick_threshold">do_reset_votekick_threshold</a></li><li><a href="#do_save_setting">do_save_setting</a></li><li><a href="#do_service">do_service</a></li><li><a href="#do_set_map_whitelist">do_set_map_whitelist</a></li><li><a href="#do_switch_player_now">do_switch_player_now</a></li><li><a href="#do_switch_player_on_death">do_switch_player_on_death</a></li><li><a href="#do_temp_ban">do_temp_ban</a></li><li><a href="#do_unban">do_unban</a></li><li><a href="#do_unban_profanities">do_unban_profanities</a></li><li><a href="#do_unwatch_player">do_unwatch_player</a></li><li><a href="#do_watch_player">do_watch_player</a></li><li><a href="#download_vips">download_vips</a></li><li><a href="#flag_player">flag_player</a></li><li><a href="#get_admin_groups">get_admin_groups</a></li><li><a href="#get_admin_ids">get_admin_ids</a></li><li><a href="#get_admin_pings_discord_webhooks_config">get_admin_pings_discord_webhooks_config</a></li><li><a href="#get_all_discord_webhooks_config">get_all_discord_webhooks_config</a></li><li><a href="#get_all_standard_message_config">get_all_standard_message_config</a></li><li><a href="#get_audit_discord_webhooks_config">get_audit_discord_webhooks_config</a></li><li><a href="#get_audit_logs">get_audit_logs</a></li><li><a href="#get_audit_logs_autocomplete">get_audit_logs_autocomplete</a></li><li><a href="#get_auto_broadcasts_config">get_auto_broadcasts_config</a></li><li><a href="#get_auto_mod_level_config">get_auto_mod_level_config</a></li><li><a href="#get_auto_mod_no_leader_config">get_auto_mod_no_leader_config</a></li><li><a href="#get_auto_mod_seeding_config">get_auto_mod_seeding_config</a></li><li><a href="#get_auto_mod_solo_tank_config">get_auto_mod_solo_tank_config</a></li><li><a href="#get_auto_settings">get_auto_settings</a></li><li><a href="#get_autobalance_enabled">get_autobalance_enabled</a></li><li><a href="#get_autobalance_threshold">get_autobalance_threshold</a></li><li><a href="#get_ban">get_ban</a></li><li><a href="#get_bans">get_bans</a></li><li><a href="#get_broadcast_message">get_broadcast_message</a></li><li><a href="#get_camera_discord_webhooks_config">get_camera_discord_webhooks_config</a></li><li><a href="#get_camera_notification_config">get_camera_notification_config</a></li><li><a href="#get_chat_commands_config">get_chat_commands_config</a></li><li><a href="#get_chat_discord_webhooks_config">get_chat_discord_webhooks_config</a></li><li><a href="#get_connection_info">get_connection_info</a></li><li><a href="#get_current_map_sequence">get_current_map_sequence</a></li><li><a href="#get_detailed_player_info">get_detailed_player_info</a></li><li><a href="#get_detailed_players">get_detailed_players</a></li><li><a href="#get_expired_vip_config">get_expired_vip_config</a></li><li><a href="#get_gamestate">get_gamestate</a></li><li><a href="#get_historical_logs">get_historical_logs</a></li><li><a href="#get_idle_autokick_time">get_idle_autokick_time</a></li><li><a href="#get_ingame_mods">get_ingame_mods</a></li><li><a href="#get_kills_discord_webhooks_config">get_kills_discord_webhooks_config</a></li><li><a href="#get_live_game_stats">get_live_game_stats</a></li><li><a href="#get_log_line_webhook_config">get_log_line_webhook_config</a></li><li><a href="#get_logs">get_logs</a></li><li><a href="#get_map">get_map</a></li><li><a href="#get_map_history">get_map_history</a></li><li><a href="#get_map_rotation">get_map_rotation</a></li><li><a href="#get_map_scoreboard">get_map_scoreboard</a></li><li><a href="#get_map_shuffle_enabled">get_map_shuffle_enabled</a></li><li><a href="#get_map_whitelist">get_map_whitelist</a></li><li><a href="#get_maps">get_maps</a></li><li><a href="#get_max_ping_autokick">get_max_ping_autokick</a></li><li><a href="#get_name">get_name</a></li><li><a href="#get_name_kick_config">get_name_kick_config</a></li><li><a href="#get_next_map">get_next_map</a></li><li><a href="#get_online_console_admins">get_online_console_admins</a></li><li><a href="#get_online_mods">get_online_mods</a></li><li><a href="#get_own_user_permissions">get_own_user_permissions</a></li><li><a href="#get_perma_bans">get_perma_bans</a></li><li><a href="#get_player_comment">get_player_comment</a></li><li><a href="#get_player_info">get_player_info</a></li><li><a href="#get_player_messages">get_player_messages</a></li><li><a href="#get_playerids">get_playerids</a></li><li><a href="#get_players">get_players</a></li><li><a href="#get_players_fast">get_players_fast</a></li><li><a href="#get_previous_map">get_previous_map</a></li><li><a href="#get_profanities">get_profanities</a></li><li><a href="#get_queue_length">get_queue_length</a></li><li><a href="#get_rcon_connection_settings_config">get_rcon_connection_settings_config</a></li><li><a href="#get_rcon_server_settings_config">get_rcon_server_settings_config</a></li><li><a href="#get_real_vip_config">get_real_vip_config</a></li><li><a href="#get_recent_logs">get_recent_logs</a></li><li><a href="#get_round_time_remaining">get_round_time_remaining</a></li><li><a href="#get_scoreboard_maps">get_scoreboard_maps</a></li><li><a href="#get_scorebot_config">get_scorebot_config</a></li><li><a href="#get_server_name_change_config">get_server_name_change_config</a></li><li><a href="#get_server_settings">get_server_settings</a></li><li><a href="#get_server_stats">get_server_stats</a></li><li><a href="#get_services">get_services</a></li><li><a href="#get_slots">get_slots</a></li><li><a href="#get_standard_broadcast_messages">get_standard_broadcast_messages</a></li><li><a href="#get_standard_punishments_messages">get_standard_punishments_messages</a></li><li><a href="#get_standard_welcome_messages">get_standard_welcome_messages</a></li><li><a href="#get_status">get_status</a></li><li><a href="#get_steam_config">get_steam_config</a></li><li><a href="#get_structured_logs">get_structured_logs</a></li><li><a href="#get_team_objective_scores">get_team_objective_scores</a></li><li><a href="#get_team_switch_cooldown">get_team_switch_cooldown</a></li><li><a href="#get_team_view">get_team_view</a></li><li><a href="#get_temp_bans">get_temp_bans</a></li><li><a href="#get_tk_ban_on_connect_config">get_tk_ban_on_connect_config</a></li><li><a href="#get_vac_game_bans_config">get_vac_game_bans_config</a></li><li><a href="#get_version">get_version</a></li><li><a href="#get_vip_ids">get_vip_ids</a></li><li><a href="#get_vip_slots_num">get_vip_slots_num</a></li><li><a href="#get_vips_count">get_vips_count</a></li><li><a href="#get_votekick_autotoggle_config">get_votekick_autotoggle_config</a></li><li><a href="#get_votekick_enabled">get_votekick_enabled</a></li><li><a href="#get_votekick_threshold">get_votekick_threshold</a></li><li><a href="#get_votemap_config">get_votemap_config</a></li><li><a href="#get_votemap_status">get_votemap_status</a></li><li><a href="#get_watchlist_discord_webhooks_config">get_watchlist_discord_webhooks_config</a></li><li><a href="#get_welcome_message">get_welcome_message</a></li><li><a href="#is_logged_in">is_logged_in</a></li><li><a href="#live_scoreboard">live_scoreboard</a></li><li><a href="#login">login</a></li><li><a href="#logout">logout</a></li><li><a href="#player">player</a></li><li><a href="#players_history">players_history</a></li><li><a href="#post_player_comment">post_player_comment</a></li><li><a href="#public_info">public_info</a></li><li><a href="#reset_votemap_state">reset_votemap_state</a></li><li><a href="#run_raw_command">run_raw_command</a></li><li><a href="#server_list">server_list</a></li><li><a href="#set_admin_pings_discord_webhooks_config">set_admin_pings_discord_webhooks_config</a></li><li><a href="#set_audit_discord_webhooks_config">set_audit_discord_webhooks_config</a></li><li><a href="#set_auto_broadcasts_config">set_auto_broadcasts_config</a></li><li><a href="#set_auto_mod_level_config">set_auto_mod_level_config</a></li><li><a href="#set_auto_mod_no_leader_config">set_auto_mod_no_leader_config</a></li><li><a href="#set_auto_mod_seeding_config">set_auto_mod_seeding_config</a></li><li><a href="#set_auto_mod_solo_tank_config">set_auto_mod_solo_tank_config</a></li><li><a href="#set_auto_settings">set_auto_settings</a></li><li><a href="#set_autobalance_enabled">set_autobalance_enabled</a></li><li><a href="#set_autobalance_threshold">set_autobalance_threshold</a></li><li><a href="#set_broadcast">set_broadcast</a></li><li><a href="#set_camera_discord_webhooks_config">set_camera_discord_webhooks_config</a></li><li><a href="#set_camera_notification_config">set_camera_notification_config</a></li><li><a href="#set_chat_commands_config">set_chat_commands_config</a></li><li><a href="#set_chat_discord_webhooks_config">set_chat_discord_webhooks_config</a></li><li><a href="#set_expired_vip_config">set_expired_vip_config</a></li><li><a href="#set_idle_autokick_time">set_idle_autokick_time</a></li><li><a href="#set_kills_discord_webhooks_config">set_kills_discord_webhooks_config</a></li><li><a href="#set_log_line_webhook_config">set_log_line_webhook_config</a></li><li><a href="#set_map">set_map</a></li><li><a href="#set_map_shuffle_enabled">set_map_shuffle_enabled</a></li><li><a href="#set_maprotation">set_maprotation</a></li><li><a href="#set_max_ping_autokick">set_max_ping_autokick</a></li><li><a href="#set_name">set_name</a></li><li><a href="#set_name_kick_config">set_name_kick_config</a></li><li><a href="#set_profanities">set_profanities</a></li><li><a href="#set_queue_length">set_queue_length</a></li><li><a href="#set_rcon_connection_settings_config">set_rcon_connection_settings_config</a></li><li><a href="#set_rcon_server_settings_config">set_rcon_server_settings_config</a></li><li><a href="#set_real_vip_config">set_real_vip_config</a></li><li><a href="#set_scorebot_config">set_scorebot_config</a></li><li><a href="#set_server_name_change_config">set_server_name_change_config</a></li><li><a href="#set_standard_broadcast_messages">set_standard_broadcast_messages</a></li><li><a href="#set_standard_punishments_messages">set_standard_punishments_messages</a></li><li><a href="#set_standard_welcome_messages">set_standard_welcome_messages</a></li><li><a href="#set_steam_config">set_steam_config</a></li><li><a href="#set_team_switch_cooldown">set_team_switch_cooldown</a></li><li><a href="#set_tk_ban_on_connect_config">set_tk_ban_on_connect_config</a></li><li><a href="#set_vac_game_bans_config">set_vac_game_bans_config</a></li><li><a href="#set_vip_slots_num">set_vip_slots_num</a></li><li><a href="#set_votekick_autotoggle_config">set_votekick_autotoggle_config</a></li><li><a href="#set_votekick_enabled">set_votekick_enabled</a></li><li><a href="#set_votekick_threshold">set_votekick_threshold</a></li><li><a href="#set_votemap_config">set_votemap_config</a></li><li><a href="#set_watchlist_discord_webhooks_config">set_watchlist_discord_webhooks_config</a></li><li><a href="#set_welcome_message">set_welcome_message</a></li><li><a href="#unban">unban</a></li><li><a href="#unblacklist_player">unblacklist_player</a></li><li><a href="#unflag_player">unflag_player</a></li><li><a href="#upload_vips">upload_vips</a></li><li><a href="#validate_admin_pings_discord_webhooks_config">validate_admin_pings_discord_webhooks_config</a></li><li><a href="#validate_audit_discord_webhooks_config">validate_audit_discord_webhooks_config</a></li><li><a href="#validate_auto_broadcasts_config">validate_auto_broadcasts_config</a></li><li><a href="#validate_auto_mod_level_config">validate_auto_mod_level_config</a></li><li><a href="#validate_auto_mod_no_leader_config">validate_auto_mod_no_leader_config</a></li><li><a href="#validate_auto_mod_seeding_config">validate_auto_mod_seeding_config</a></li><li><a href="#validate_auto_mod_solo_tank_config">validate_auto_mod_solo_tank_config</a></li><li><a href="#validate_camera_discord_webhooks_config">validate_camera_discord_webhooks_config</a></li><li><a href="#validate_camera_notification_config">validate_camera_notification_config</a></li><li><a href="#validate_chat_commands_config">validate_chat_commands_config</a></li><li><a href="#validate_chat_discord_webhooks_config">validate_chat_discord_webhooks_config</a></li><li><a href="#validate_expired_vip_config">validate_expired_vip_config</a></li><li><a href="#validate_kills_discord_webhooks_config">validate_kills_discord_webhooks_config</a></li><li><a href="#validate_log_line_webhook_config">validate_log_line_webhook_config</a></li><li><a href="#validate_name_kick_config">validate_name_kick_config</a></li><li><a href="#validate_rcon_connection_settings_config">validate_rcon_connection_settings_config</a></li><li><a href="#validate_rcon_server_settings_config">validate_rcon_server_settings_config</a></li><li><a href="#validate_real_vip_config">validate_real_vip_config</a></li><li><a href="#validate_scorebot_config">validate_scorebot_config</a></li><li><a href="#validate_server_name_change_config">validate_server_name_change_config</a></li><li><a href="#validate_standard_broadcast_messages">validate_standard_broadcast_messages</a></li><li><a href="#validate_standard_punishments_messages">validate_standard_punishments_messages</a></li><li><a href="#validate_standard_welcome_messages">validate_standard_welcome_messages</a></li><li><a href="#validate_steam_config">validate_steam_config</a></li><li><a href="#validate_tk_ban_on_connect_config">validate_tk_ban_on_connect_config</a></li><li><a href="#validate_vac_game_bans_config">validate_vac_game_bans_config</a></li><li><a href="#validate_votekick_autotoggle_config">validate_votekick_autotoggle_config</a></li><li><a href="#validate_votemap_config">validate_votemap_config</a></li><li><a href="#validate_watchlist_discord_webhooks_config">validate_watchlist_discord_webhooks_config</a></li>
+            </ul>
+        </div>
+    
+            <hr>
+            <h2 id="async_upload_vips">async_upload_vips</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="async_upload_vips_result">async_upload_vips_result</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="blacklist_player">blacklist_player</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="clear_cache">clear_cache</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="date_scoreboard">date_scoreboard</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="describe_admin_pings_discord_webhooks_config">describe_admin_pings_discord_webhooks_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="describe_audit_discord_webhooks_config">describe_audit_discord_webhooks_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="describe_auto_broadcasts_config">describe_auto_broadcasts_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="describe_auto_mod_level_config">describe_auto_mod_level_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="describe_auto_mod_no_leader_config">describe_auto_mod_no_leader_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="describe_auto_mod_seeding_config">describe_auto_mod_seeding_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="describe_auto_mod_solo_tank_config">describe_auto_mod_solo_tank_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="describe_camera_discord_webhooks_config">describe_camera_discord_webhooks_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="describe_camera_notification_config">describe_camera_notification_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="describe_chat_commands_config">describe_chat_commands_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="describe_chat_discord_webhooks_config">describe_chat_discord_webhooks_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="describe_expired_vip_config">describe_expired_vip_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="describe_kills_discord_webhooks_config">describe_kills_discord_webhooks_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="describe_log_line_webhook_config">describe_log_line_webhook_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="describe_name_kick_config">describe_name_kick_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="describe_rcon_connection_settings_config">describe_rcon_connection_settings_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="describe_rcon_server_settings_config">describe_rcon_server_settings_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="describe_real_vip_config">describe_real_vip_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="describe_scorebot_config">describe_scorebot_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="describe_server_name_change_config">describe_server_name_change_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="describe_standard_broadcast_messages">describe_standard_broadcast_messages</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="describe_standard_punishments_messages">describe_standard_punishments_messages</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="describe_standard_welcome_messages">describe_standard_welcome_messages</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="describe_steam_config">describe_steam_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="describe_tk_ban_on_connect_config">describe_tk_ban_on_connect_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="describe_vac_game_bans_config">describe_vac_game_bans_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="describe_votekick_autotoggle_config">describe_votekick_autotoggle_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="describe_votemap_config">describe_votemap_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="describe_watchlist_discord_webhooks_config">describe_watchlist_discord_webhooks_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="do_add_admin">do_add_admin</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>steam_id_64: default: None, annotation: None</li><li>role: default: None, annotation: None</li><li>name: default: None, annotation: None</li></ul>
+            <p><strong>Return Type:</strong> <class 'str'></p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="do_add_map_to_rotation">do_add_map_to_rotation</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>map_name: default: None, annotation: None</li><li>after_map_name: default: None, annotation: str | None</li><li>after_map_name_number: default: None, annotation: int | None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="do_add_map_to_whitelist">do_add_map_to_whitelist</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="do_add_maps_to_rotation">do_add_maps_to_rotation</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>maps: default: None, annotation: None</li></ul>
+            <p><strong>Return Type:</strong> typing.Literal['SUCCESS']</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="do_add_maps_to_whitelist">do_add_maps_to_whitelist</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="do_add_vip">do_add_vip</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>name: default: None, annotation: None</li><li>steam_id_64: default: None, annotation: None</li><li>expiration: default: , annotation: <class 'str'></li></ul>
+            <p><strong>Return Type:</strong> <class 'str'></p>
+            <p><strong>Description:</strong> Adds VIP status on the game server and adds or updates their PlayerVIP record.</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="do_ban_profanities">do_ban_profanities</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>profanities: default: None, annotation: None</li></ul>
+            <p><strong>Return Type:</strong> <class 'str'></p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="do_kick">do_kick</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>player: default: None, annotation: None</li><li>reason: default: None, annotation: None</li><li>by: default: None, annotation: None</li><li>steam_id_64: default: None, annotation: str | None</li></ul>
+            <p><strong>Return Type:</strong> <class 'str'></p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="do_message_player">do_message_player</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>player: default: None, annotation: None</li><li>steam_id_64: default: None, annotation: None</li><li>message: default: , annotation: <class 'str'></li><li>by: default: , annotation: <class 'str'></li><li>save_message: default: False, annotation: <class 'bool'></li></ul>
+            <p><strong>Return Type:</strong> <class 'str'></p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="do_perma_ban">do_perma_ban</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>player: default: None, annotation: None</li><li>steam_id_64: default: None, annotation: None</li><li>reason: default: , annotation: None</li><li>by: default: , annotation: None</li></ul>
+            <p><strong>Return Type:</strong> <class 'str'></p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="do_punish">do_punish</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>player: default: None, annotation: None</li><li>reason: default: None, annotation: None</li><li>by: default: None, annotation: None</li></ul>
+            <p><strong>Return Type:</strong> <class 'str'></p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="do_reconnect_gameserver">do_reconnect_gameserver</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Restart gunicorn workers which reconnects Rcon endpoint instances</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="do_remove_admin">do_remove_admin</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>steam_id_64: default: None, annotation: None</li></ul>
+            <p><strong>Return Type:</strong> <class 'str'></p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="do_remove_all_vips">do_remove_all_vips</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> typing.Literal['SUCCESS']</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="do_remove_map_from_rotation">do_remove_map_from_rotation</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>map_name: default: None, annotation: None</li><li>map_number: default: None, annotation: int | None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="do_remove_map_from_whitelist">do_remove_map_from_whitelist</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="do_remove_maps_from_rotation">do_remove_maps_from_rotation</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>maps: default: None, annotation: None</li></ul>
+            <p><strong>Return Type:</strong> typing.Literal['SUCCESS']</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="do_remove_maps_from_whitelist">do_remove_maps_from_whitelist</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="do_remove_perma_ban">do_remove_perma_ban</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>ban_log: default: None, annotation: None</li></ul>
+            <p><strong>Return Type:</strong> <class 'str'></p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="do_remove_temp_ban">do_remove_temp_ban</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>ban_log: default: None, annotation: str | None</li><li>steam_id_64: default: None, annotation: str | None</li></ul>
+            <p><strong>Return Type:</strong> <class 'str'></p>
+            <p><strong>Description:</strong> Remove a temp ban by steam ID or game server ban log</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="do_remove_vip">do_remove_vip</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>steam_id_64: default: None, annotation: None</li></ul>
+            <p><strong>Return Type:</strong> <class 'str'></p>
+            <p><strong>Description:</strong> Removes VIP status on the game server and removes their PlayerVIP record.</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="do_reset_map_whitelist">do_reset_map_whitelist</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="do_reset_votekick_threshold">do_reset_votekick_threshold</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> <class 'str'></p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="do_save_setting">do_save_setting</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>name: default: None, annotation: None</li><li>value: default: None, annotation: None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="do_service">do_service</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="do_set_map_whitelist">do_set_map_whitelist</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="do_switch_player_now">do_switch_player_now</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>player: default: None, annotation: None</li><li>by: default: None, annotation: None</li></ul>
+            <p><strong>Return Type:</strong> <class 'str'></p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="do_switch_player_on_death">do_switch_player_on_death</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>player: default: None, annotation: None</li><li>by: default: None, annotation: None</li></ul>
+            <p><strong>Return Type:</strong> <class 'str'></p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="do_temp_ban">do_temp_ban</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>player: default: None, annotation: None</li><li>steam_id_64: default: None, annotation: None</li><li>duration_hours: default: 2, annotation: None</li><li>reason: default: , annotation: None</li><li>by: default: , annotation: None</li></ul>
+            <p><strong>Return Type:</strong> <class 'str'></p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="do_unban">do_unban</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>steam_id_64: default: None, annotation: None</li></ul>
+            <p><strong>Return Type:</strong> list[str]</p>
+            <p><strong>Description:</strong> Remove all temporary and permanent bans from the steam_id_64</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="do_unban_profanities">do_unban_profanities</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>profanities: default: None, annotation: None</li></ul>
+            <p><strong>Return Type:</strong> <class 'str'></p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="do_unwatch_player">do_unwatch_player</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="do_watch_player">do_watch_player</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="download_vips">download_vips</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="flag_player">flag_player</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_admin_groups">get_admin_groups</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> list[str]</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_admin_ids">get_admin_ids</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>self: default: None, annotation: None</li></ul>
+            <p><strong>Return Type:</strong> list[rcon.types.AdminType]</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_admin_pings_discord_webhooks_config">get_admin_pings_discord_webhooks_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_all_discord_webhooks_config">get_all_discord_webhooks_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_all_standard_message_config">get_all_standard_message_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_audit_discord_webhooks_config">get_audit_discord_webhooks_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_audit_logs">get_audit_logs</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_audit_logs_autocomplete">get_audit_logs_autocomplete</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_auto_broadcasts_config">get_auto_broadcasts_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_auto_mod_level_config">get_auto_mod_level_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_auto_mod_no_leader_config">get_auto_mod_no_leader_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_auto_mod_seeding_config">get_auto_mod_seeding_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> <class 'django.http.response.JsonResponse'></p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_auto_mod_solo_tank_config">get_auto_mod_solo_tank_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> <class 'django.http.response.JsonResponse'></p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_auto_settings">get_auto_settings</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_autobalance_enabled">get_autobalance_enabled</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>self: default: None, annotation: None</li></ul>
+            <p><strong>Return Type:</strong> <class 'bool'></p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_autobalance_threshold">get_autobalance_threshold</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>self: default: None, annotation: None</li></ul>
+            <p><strong>Return Type:</strong> <class 'int'></p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_ban">get_ban</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>steam_id_64: default: None, annotation: None</li></ul>
+            <p><strong>Return Type:</strong> list[rcon.types.GameServerBanType]</p>
+            <p><strong>Description:</strong> get all bans from steam_id_64
+@param steam_id_64: steam_id_64 of a user
+@return: a array of bans</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_bans">get_bans</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> list[rcon.types.GameServerBanType]</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_broadcast_message">get_broadcast_message</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> str | bytes</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_camera_discord_webhooks_config">get_camera_discord_webhooks_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_camera_notification_config">get_camera_notification_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_chat_commands_config">get_chat_commands_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_chat_discord_webhooks_config">get_chat_discord_webhooks_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_connection_info">get_connection_info</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_current_map_sequence">get_current_map_sequence</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>self: default: None, annotation: None</li></ul>
+            <p><strong>Return Type:</strong> list[str]</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_detailed_player_info">get_detailed_player_info</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>self: default: None, annotation: None</li><li>player: default: None, annotation: None</li></ul>
+            <p><strong>Return Type:</strong> <class 'rcon.types.GetDetailedPlayer'></p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_detailed_players">get_detailed_players</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> <class 'rcon.types.GetDetailedPlayers'></p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_expired_vip_config">get_expired_vip_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_gamestate">get_gamestate</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> <class 'rcon.types.GameState'></p>
+            <p><strong>Description:</strong> Returns player counts, team scores, remaining match time and current/next map
+
+Players: Allied: 0 - Axis: 1
+Score: Allied: 2 - Axis: 2
+Remaining Time: 0:11:51
+Map: foy_warfare
+Next Map: stmariedumont_warfare</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_historical_logs">get_historical_logs</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_idle_autokick_time">get_idle_autokick_time</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>self: default: None, annotation: None</li></ul>
+            <p><strong>Return Type:</strong> <class 'int'></p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_ingame_mods">get_ingame_mods</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_kills_discord_webhooks_config">get_kills_discord_webhooks_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_live_game_stats">get_live_game_stats</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_log_line_webhook_config">get_log_line_webhook_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_logs">get_logs</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>args: default: None, annotation: None</li><li>kwargs: default: None, annotation: None</li></ul>
+            <p><strong>Return Type:</strong> <class 'str'></p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_map">get_map</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>self: default: None, annotation: None</li></ul>
+            <p><strong>Return Type:</strong> <class 'str'></p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_map_history">get_map_history</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_map_rotation">get_map_rotation</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>self: default: None, annotation: None</li></ul>
+            <p><strong>Return Type:</strong> list[str]</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_map_scoreboard">get_map_scoreboard</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_map_shuffle_enabled">get_map_shuffle_enabled</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>self: default: None, annotation: None</li></ul>
+            <p><strong>Return Type:</strong> <class 'bool'></p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_map_whitelist">get_map_whitelist</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_maps">get_maps</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>self: default: None, annotation: None</li></ul>
+            <p><strong>Return Type:</strong> list[str]</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_max_ping_autokick">get_max_ping_autokick</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>self: default: None, annotation: None</li></ul>
+            <p><strong>Return Type:</strong> <class 'int'></p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_name">get_name</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>self: default: None, annotation: None</li></ul>
+            <p><strong>Return Type:</strong> <class 'str'></p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_name_kick_config">get_name_kick_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_next_map">get_next_map</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>self: default: None, annotation: None</li></ul>
+            <p><strong>Return Type:</strong> <class 'str'></p>
+            <p><strong>Description:</strong> Return the next map in the rotation as determined by the gameserver through the gamestate command</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_online_console_admins">get_online_console_admins</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> list[str]</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_online_mods">get_online_mods</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_own_user_permissions">get_own_user_permissions</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_perma_bans">get_perma_bans</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>self: default: None, annotation: None</li></ul>
+            <p><strong>Return Type:</strong> list[str]</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_player_comment">get_player_comment</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_player_info">get_player_info</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>self: default: None, annotation: None</li><li>player: default: None, annotation: None</li><li>can_fail: default: False, annotation: None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_player_messages">get_player_messages</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_playerids">get_playerids</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>as_dict: default: False, annotation: None</li></ul>
+            <p><strong>Return Type:</strong> rcon.types.PlayerIdsType | list[tuple[str, str]]</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_players">get_players</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>self: default: None, annotation: None</li></ul>
+            <p><strong>Return Type:</strong> list[rcon.types.EnrichedGetPlayersType]</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_players_fast">get_players_fast</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> list[rcon.types.GetPlayersType]</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_previous_map">get_previous_map</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_profanities">get_profanities</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>self: default: None, annotation: None</li></ul>
+            <p><strong>Return Type:</strong> list[str]</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_queue_length">get_queue_length</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>self: default: None, annotation: None</li></ul>
+            <p><strong>Return Type:</strong> <class 'int'></p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_rcon_connection_settings_config">get_rcon_connection_settings_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_rcon_server_settings_config">get_rcon_server_settings_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_real_vip_config">get_real_vip_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_recent_logs">get_recent_logs</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_round_time_remaining">get_round_time_remaining</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>self: default: None, annotation: None</li></ul>
+            <p><strong>Return Type:</strong> <class 'datetime.timedelta'></p>
+            <p><strong>Description:</strong> Returns the amount of time left in the round as a timedelta</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_scoreboard_maps">get_scoreboard_maps</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_scorebot_config">get_scorebot_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_server_name_change_config">get_server_name_change_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_server_settings">get_server_settings</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_server_stats">get_server_stats</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_services">get_services</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_slots">get_slots</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>self: default: None, annotation: None</li></ul>
+            <p><strong>Return Type:</strong> <class 'str'></p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_standard_broadcast_messages">get_standard_broadcast_messages</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_standard_punishments_messages">get_standard_punishments_messages</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_standard_welcome_messages">get_standard_welcome_messages</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_status">get_status</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>self: default: None, annotation: None</li></ul>
+            <p><strong>Return Type:</strong> <class 'rcon.types.StatusType'></p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_steam_config">get_steam_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_structured_logs">get_structured_logs</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>self: default: None, annotation: None</li><li>since_min_ago: default: None, annotation: None</li><li>filter_action: default: None, annotation: None</li><li>filter_player: default: None, annotation: None</li></ul>
+            <p><strong>Return Type:</strong> <class 'rcon.types.ParsedLogsType'></p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_team_objective_scores">get_team_objective_scores</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>self: default: None, annotation: None</li></ul>
+            <p><strong>Return Type:</strong> tuple[int, int]</p>
+            <p><strong>Description:</strong> Returns the number of objectives held by the allied/axis team respectively</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_team_switch_cooldown">get_team_switch_cooldown</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>self: default: None, annotation: None</li></ul>
+            <p><strong>Return Type:</strong> <class 'int'></p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_team_view">get_team_view</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>self: default: None, annotation: None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_temp_bans">get_temp_bans</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>self: default: None, annotation: None</li></ul>
+            <p><strong>Return Type:</strong> list[str]</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_tk_ban_on_connect_config">get_tk_ban_on_connect_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_vac_game_bans_config">get_vac_game_bans_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_version">get_version</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_vip_ids">get_vip_ids</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>self: default: None, annotation: None</li></ul>
+            <p><strong>Return Type:</strong> list[rcon.types.VipIdType]</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_vip_slots_num">get_vip_slots_num</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>self: default: None, annotation: None</li></ul>
+            <p><strong>Return Type:</strong> <class 'str'></p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_vips_count">get_vips_count</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> <class 'int'></p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_votekick_autotoggle_config">get_votekick_autotoggle_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_votekick_enabled">get_votekick_enabled</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>self: default: None, annotation: None</li></ul>
+            <p><strong>Return Type:</strong> <class 'bool'></p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_votekick_threshold">get_votekick_threshold</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>self: default: None, annotation: None</li></ul>
+            <p><strong>Return Type:</strong> <class 'str'></p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_votemap_config">get_votemap_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_votemap_status">get_votemap_status</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_watchlist_discord_webhooks_config">get_watchlist_discord_webhooks_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="get_welcome_message">get_welcome_message</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="is_logged_in">is_logged_in</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="live_scoreboard">live_scoreboard</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="login">login</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="logout">logout</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="player">player</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="players_history">players_history</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="post_player_comment">post_player_comment</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="public_info">public_info</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="reset_votemap_state">reset_votemap_state</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="run_raw_command">run_raw_command</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="server_list">server_list</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="set_admin_pings_discord_webhooks_config">set_admin_pings_discord_webhooks_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="set_audit_discord_webhooks_config">set_audit_discord_webhooks_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="set_auto_broadcasts_config">set_auto_broadcasts_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="set_auto_mod_level_config">set_auto_mod_level_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="set_auto_mod_no_leader_config">set_auto_mod_no_leader_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="set_auto_mod_seeding_config">set_auto_mod_seeding_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="set_auto_mod_solo_tank_config">set_auto_mod_solo_tank_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="set_auto_settings">set_auto_settings</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="set_autobalance_enabled">set_autobalance_enabled</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>bool_: default: None, annotation: None</li></ul>
+            <p><strong>Return Type:</strong> <class 'str'></p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="set_autobalance_threshold">set_autobalance_threshold</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>max_diff: default: None, annotation: None</li></ul>
+            <p><strong>Return Type:</strong> <class 'str'></p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="set_broadcast">set_broadcast</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>msg: default: None, annotation: None</li><li>save: default: True, annotation: None</li></ul>
+            <p><strong>Return Type:</strong> <class 'str'></p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="set_camera_discord_webhooks_config">set_camera_discord_webhooks_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="set_camera_notification_config">set_camera_notification_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="set_chat_commands_config">set_chat_commands_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="set_chat_discord_webhooks_config">set_chat_discord_webhooks_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="set_expired_vip_config">set_expired_vip_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="set_idle_autokick_time">set_idle_autokick_time</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>minutes: default: None, annotation: None</li></ul>
+            <p><strong>Return Type:</strong> <class 'str'></p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="set_kills_discord_webhooks_config">set_kills_discord_webhooks_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="set_log_line_webhook_config">set_log_line_webhook_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="set_map">set_map</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>map_name: default: None, annotation: None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="set_map_shuffle_enabled">set_map_shuffle_enabled</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>enabled: default: None, annotation: <class 'bool'></li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="set_maprotation">set_maprotation</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>rotation: default: None, annotation: None</li></ul>
+            <p><strong>Return Type:</strong> list[str]</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="set_max_ping_autokick">set_max_ping_autokick</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>max_ms: default: None, annotation: None</li></ul>
+            <p><strong>Return Type:</strong> <class 'str'></p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="set_name">set_name</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="set_name_kick_config">set_name_kick_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="set_profanities">set_profanities</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>profanities: default: None, annotation: list[str]</li></ul>
+            <p><strong>Return Type:</strong> list[str]</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="set_queue_length">set_queue_length</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>num: default: None, annotation: None</li></ul>
+            <p><strong>Return Type:</strong> <class 'str'></p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="set_rcon_connection_settings_config">set_rcon_connection_settings_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="set_rcon_server_settings_config">set_rcon_server_settings_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="set_real_vip_config">set_real_vip_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="set_scorebot_config">set_scorebot_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="set_server_name_change_config">set_server_name_change_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="set_standard_broadcast_messages">set_standard_broadcast_messages</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="set_standard_punishments_messages">set_standard_punishments_messages</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="set_standard_welcome_messages">set_standard_welcome_messages</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="set_steam_config">set_steam_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="set_team_switch_cooldown">set_team_switch_cooldown</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>minutes: default: None, annotation: None</li></ul>
+            <p><strong>Return Type:</strong> <class 'str'></p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="set_tk_ban_on_connect_config">set_tk_ban_on_connect_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="set_vac_game_bans_config">set_vac_game_bans_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="set_vip_slots_num">set_vip_slots_num</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>num: default: None, annotation: None</li></ul>
+            <p><strong>Return Type:</strong> <class 'str'></p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="set_votekick_autotoggle_config">set_votekick_autotoggle_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="set_votekick_enabled">set_votekick_enabled</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>bool_: default: None, annotation: None</li></ul>
+            <p><strong>Return Type:</strong> <class 'str'></p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="set_votekick_threshold">set_votekick_threshold</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>threshold_pairs: default: None, annotation: None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="set_votemap_config">set_votemap_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="set_watchlist_discord_webhooks_config">set_watchlist_discord_webhooks_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="set_welcome_message">set_welcome_message</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>msg: default: None, annotation: None</li><li>save: default: True, annotation: None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="unban">unban</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="unblacklist_player">unblacklist_player</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="unflag_player">unflag_player</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="upload_vips">upload_vips</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="validate_admin_pings_discord_webhooks_config">validate_admin_pings_discord_webhooks_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="validate_audit_discord_webhooks_config">validate_audit_discord_webhooks_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="validate_auto_broadcasts_config">validate_auto_broadcasts_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="validate_auto_mod_level_config">validate_auto_mod_level_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="validate_auto_mod_no_leader_config">validate_auto_mod_no_leader_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="validate_auto_mod_seeding_config">validate_auto_mod_seeding_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="validate_auto_mod_solo_tank_config">validate_auto_mod_solo_tank_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="validate_camera_discord_webhooks_config">validate_camera_discord_webhooks_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="validate_camera_notification_config">validate_camera_notification_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="validate_chat_commands_config">validate_chat_commands_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="validate_chat_discord_webhooks_config">validate_chat_discord_webhooks_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="validate_expired_vip_config">validate_expired_vip_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="validate_kills_discord_webhooks_config">validate_kills_discord_webhooks_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="validate_log_line_webhook_config">validate_log_line_webhook_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="validate_name_kick_config">validate_name_kick_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="validate_rcon_connection_settings_config">validate_rcon_connection_settings_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="validate_rcon_server_settings_config">validate_rcon_server_settings_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="validate_real_vip_config">validate_real_vip_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="validate_scorebot_config">validate_scorebot_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="validate_server_name_change_config">validate_server_name_change_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="validate_standard_broadcast_messages">validate_standard_broadcast_messages</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="validate_standard_punishments_messages">validate_standard_punishments_messages</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="validate_standard_welcome_messages">validate_standard_welcome_messages</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="validate_steam_config">validate_steam_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="validate_tk_ban_on_connect_config">validate_tk_ban_on_connect_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="validate_vac_game_bans_config">validate_vac_game_bans_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="validate_votekick_autotoggle_config">validate_votekick_autotoggle_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="validate_votemap_config">validate_votemap_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+            <hr>
+            <h2 id="validate_watchlist_discord_webhooks_config">validate_watchlist_discord_webhooks_config</h2>
+            <p><strong>Arguments:</strong></p>
+            <ul><li>None</li></ul>
+            <p><strong>Return Type:</strong> None</p>
+            <p><strong>Description:</strong> Not provided</p>
+            <a href="#toc">Back to Top</a>
+        
+    </body>
+    </html>
+    
