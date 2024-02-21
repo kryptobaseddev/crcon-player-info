@@ -1013,13 +1013,99 @@ Next Map: stmariedumont_warfare</p>
             <p><strong>Description:</strong> Not provided</p>
             <a href="#toc">Back to Top</a>
         
-            <hr>
-            <h2 id="get_players">get_players</h2>
-            <p><strong>Arguments:</strong></p>
-            <ul><li>self: default: None, annotation: None</li></ul>
-            <p><strong>Return Type:</strong> list[rcon.types.EnrichedGetPlayersType]</p>
-            <p><strong>Description:</strong> Not provided</p>
-            <a href="#toc">Back to Top</a>
+<hr>
+<h2 id="get_players">get_players</h2>
+<p><strong>Overview:</strong> The <code>get_players</code> endpoint retrieves a list of all active players currently in the game session, providing detailed information about each player.</p>
+<p><strong>HTTP Method:</strong> GET</p>
+<p><strong>Endpoint:</strong> <code>/get_players</code></p>
+<p><strong>Headers:</strong></p>
+<ul>
+    <li><code>Authorization</code>: Required. A valid API token to authenticate the request.</li>
+</ul>
+<p><strong>Arguments:</strong> No additional arguments are required for this endpoint beyond the standard headers.</p>
+<p><strong>Return Type:</strong> <code>list[rcon.types.EnrichedGetPlayersType]</code>: This endpoint returns a JSON list of player objects, each containing detailed information about an individual player.</p>
+<p><strong>Response Schema:</strong> Each item in the returned list includes the following fields:</p>
+<ul>
+    <li><code>name</code>: String. The player's name.</li>
+    <li><code>steam_id_64</code>: String. The player's 64-bit Steam ID.</li>
+    <li><code>country</code>: String. The player's country, if available.</li>
+    <li><code>steam_bans</code>: Object. Information about the player's Steam bans, if any.
+        <ul>
+            <li><code>SteamId</code>: String. The player's Steam ID.</li>
+            <li><code>VACBanned</code>: Boolean. Whether the player has VAC bans.</li>
+            <li><code>EconomyBan</code>: String. The status of any Steam Economy bans.</li>
+            <li><code>CommunityBanned</code>: Boolean. Whether the player is banned from Steam Community.</li>
+            <li><code>NumberOfVACBans</code>: Integer. The number of VAC bans.</li>
+            <li><code>DaysSinceLastBan</code>: Integer. Days since the last ban was issued.</li>
+            <li><code>NumberOfGameBans</code>: Integer. The number of game-specific bans.</li>
+        </ul>
+    </li>
+    <li><code>profile</code>: Object. Additional profile information.
+        <ul>
+            <li>Include subfields like <code>id</code>, <code>created</code>, <code>sessions</code>, <code>total_playtime_seconds</code>, etc., as applicable to your API's return data.</li>
+        </ul>
+    </li>
+    <li><code>is_vip</code>: Boolean. Indicates whether the player is marked as a VIP in the game.</li>
+</ul>
+<p><strong>Example Response:</strong></p>
+<pre><code>{
+  "result": [
+    {
+      "name": "Joy H. Antennas",
+      "steam_id_64": "76561198010278729",
+      "country": "private",
+      "steam_bans": {
+        "SteamId": "76561198010278729",
+        "VACBanned": false,
+        "EconomyBan": "none",
+        "CommunityBanned": false,
+        "NumberOfVACBans": 0,
+        "DaysSinceLastBan": 0,
+        "NumberOfGameBans": 0
+      },
+      "profile": {
+        "id": 6862,
+        "steam_id_64": "76561198010278729",
+        "created": "2024-02-20T20:25:53.852",
+        "sessions_count": 1,
+        "total_playtime_seconds": 10431,
+        "current_playtime_seconds": 10431,
+        "received_actions": [],
+        "penalty_count": {
+          "KICK": 0,
+          "PUNISH": 0,
+          "TEMPBAN": 0,
+          "PERMABAN": 0
+        },
+        "blacklist": null,
+        "flags": [],
+        "watchlist": null,
+        "steaminfo": {
+          "profileurl": "https://steamcommunity.com/id/Taeic/",
+          "personaname": "Joy H. Antennas",
+          "avatarfull": "https://avatars.steamstatic.com/af98b236bbda4c55de2a443fa45e114444d42138_full.jpg",
+          "has_bans": false
+        },
+        "vips": []
+      },
+      "is_vip": false
+    }
+  ],
+  "command": "get_players",
+  "arguments": {},
+  "failed": false,
+  "error": "",
+  "forward_results": null
+}</code></pre>
+<p><strong>Usage:</strong> To use this endpoint, make a GET request to <code>/get_players</code> with a valid <code>Authorization</code> header. The response will be a JSON object containing a list of active players and their detailed information as outlined in the response schema above.</p>
+<p><strong>Notes:</strong>
+<ul>
+    <li>Ensure your API key/token is kept secure and not exposed in client-side code.</li>
+    <li>The actual structure and fields returned by your API might vary, so adjust the documentation accordingly to reflect your API's specifics.</li>
+</ul>
+</p>
+<a href="#toc">Back to Top</a>
+
         
             <hr>
             <h2 id="get_players_fast">get_players_fast</h2>
